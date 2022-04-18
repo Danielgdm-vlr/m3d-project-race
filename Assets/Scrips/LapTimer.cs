@@ -46,6 +46,16 @@ public class LapTimer : MonoBehaviour
 
     private void calculateMinutes(){
     
+        if(secondsCounter > 59){
+            secondsCounter = 0;
+            minutesCounter += 1;
+        }
 
+        if(minutesCounter <= 9){
+            minutesBox.GetComponent<Text>().text ="0" + minutesCounter + ":";
+            return;
+        }
+
+        minutesBox.GetComponent<Text>().text = minutesCounter + ":";
     }
 }
