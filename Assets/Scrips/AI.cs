@@ -22,7 +22,6 @@ public class AI : MonoBehaviour
     IEnumerator OnTriggerEnter(Collider collision) {
 
 		if (collision.gameObject.tag == "AICar") {
-            Debug.Log("xd");
 			this.GetComponent<BoxCollider> ().enabled = false;
 			waypointCounter ++;
 			// if (waypointCounter == 7) {
